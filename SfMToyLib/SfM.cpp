@@ -613,8 +613,8 @@ void SfM::mergeNewPointCloud(const PointCloud& cloud) {
                             mImages[j], mImageFeatures[j].keyPoints,
                             matching, outImage);
                 //write the images index...
-                putText(outImage, "Image " + to_string(i), Point (10,                     50), CV_FONT_NORMAL, 3.0, Colors::GREEN, 3);
-                putText(outImage, "Image " + to_string(j), Point (10 + outImage.cols / 2, 50), CV_FONT_NORMAL, 3.0, Colors::GREEN, 3);
+                putText(outImage, "Image " + to_string(i), Point (10,                     50), FP_NORMAL, 3.0, Colors::GREEN, 3);
+                putText(outImage, "Image " + to_string(j), Point (10 + outImage.cols / 2, 50), FP_NORMAL, 3.0, Colors::GREEN, 3);
                 resize(outImage, outImage, Size(), 0.25, 0.25);
                 imshow("Merge Match", outImage);
                 waitKey(0);
